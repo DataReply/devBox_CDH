@@ -1,0 +1,1 @@
+{"virtualbox":{"/opt/docker":{"guestpath":"/opt/docker","hostpath":"D:/workingdir/reply_cluster/workspace/deplyoment/devBox_CDH/docker","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"D:/workingdir/reply_cluster/workspace/deplyoment/devBox_CDH","disabled":false}}}
