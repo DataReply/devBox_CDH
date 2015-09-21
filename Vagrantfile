@@ -25,14 +25,15 @@ Vagrant.configure("2") do |config|
 
   config.vm.define :master do |master|
     master.vm.provider :virtualbox do |v|
-      v.name = "databox"
+      v.name = "sparkbox"
       v.customize ["modifyvm", :id, "--memory", "4096"]
     end
     master.vm.network :private_network, ip: "10.0.10.11"
-    master.vm.hostname = "databox"
+    master.vm.hostname = "sparkbox"
     master.vm.provision :shell, :inline => $hosts_script
     master.vm.provision :hostmanager
     master.vm.synced_folder "docker/", "/opt/docker"
+    master.vm.provision :shell, :path => "setup.sh"
   end
 
 end
